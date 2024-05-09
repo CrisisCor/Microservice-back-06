@@ -1,0 +1,17 @@
+name: Hello Image CI pipeline
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    uses: CrisisCor/templates/.github/workflows/build-and-push.yml@main
+    with:
+      tag: "latest"
+      repo-user: "crisiscor"
+      repo-name: "Microservice-back-01"
+    secrets:
+      user: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+      pass: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+      token: xxxxxxxxxxxxxxxxxxxxxxxxx
